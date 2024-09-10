@@ -1,0 +1,20 @@
+:root {
+  /* Guitar colors */
+  --bridge-head: #5f3232;
+  --body: #b75200;
+  --body2: #502f23;
+  --sound-hole: #222222;
+  --sound-hole-ring: #ca971b;
+  --nut: #d2b48c;
+  --frets: #b3b3b3;
+  --fretboard: #493b2b;
+  --tuners: #cc9000;
+  --fretdots: #bdbcd2;
+  --strings: #ffffff;
+}
+
+body{
+  margin-inline: 1em;
+  overflow-x: hidden;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
