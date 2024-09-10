@@ -1,5 +1,13 @@
 <script>
   export let data
+
+  let strumTrigger
+  let mySound
+
+  function playSound(soundobj) {
+    var thissound = document.getElementById(soundobj);
+    mySound.play();
+  }
 </script>
 
 <svelte:head>
@@ -105,16 +113,20 @@
       </g>
     </g>
     <rect class="guitarPick" height="100" width="100" fill="rgba(255,255,255,0)" x="0" y="0" />
-    <g fill="rgba(0,0,255,0)">
-    <rect class="strumTrigger" height="2112" width="64" x="508" y="448" />
-    <rect class="strumTrigger" height="2112" width="64" x="546" y="448" />
-    <rect class="strumTrigger" height="2112" width="64" x="578" y="448" />
-    <rect class="strumTrigger" height="2112" width="64" x="610" y="448" />
-    <rect class="strumTrigger" height="2112" width="64" x="646" y="448" />
-    <rect class="strumTrigger" height="2112" width="64" x="678" y="448" />
+    <!-- svelte-ignore a11y-no-static-element-interactions -->
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <g fill="rgba(0,0,255,0)" on:click={playSound(mySound)}>
+      <rect bind:this={strumTrigger} height="2112" width="64" x="508" y="448" />
+      <rect bind:this={strumTrigger} height="2112" width="64" x="546" y="448" />
+      <rect bind:this={strumTrigger} height="2112" width="64" x="578" y="448" />
+      <rect bind:this={strumTrigger} height="2112" width="64" x="610" y="448" />
+      <rect bind:this={strumTrigger} height="2112" width="64" x="646" y="448" />
+      <rect bind:this={strumTrigger} height="2112" width="64" x="678" y="448" />
+    </g>
   </svg>
 </main>
 
+<audio bind:this={mySound} src='/strum.wav' />
 
 <style>
   h1 {
