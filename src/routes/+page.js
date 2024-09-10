@@ -1,2 +1,0 @@
-// Gitaar snaren met geluid
-
