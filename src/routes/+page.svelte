@@ -10,7 +10,7 @@
   }
 
   function showInfo() {
-    current = (current + 1) % 6;
+    current = (current + 1) % 7;
     return current;
   }
 </script>
