@@ -20,7 +20,7 @@
 </svelte:head>
 
 <h1>{data.person.name}'s visitekaartje</h1>
-<a href="/75">go here</a>
+
 <main>
   <section>
     <p class:hide={current != 0} class:show={current === 0}>Strum om meer over mij uit te vinden.</p>
