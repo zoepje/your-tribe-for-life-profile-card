@@ -23,7 +23,7 @@
 <main>
   <section>
     <p class:hide={current != 0} class:show={current === 0}>
-      Speel gitaar om meer over mij uit te vinden.
+      Speel de gitaar en onthul meer over wie ik ben!
     </p>
     <p class:hide={current != 1} class:show={current === 1}>
       {data.person.name} {data.person.surname}
