@@ -8,6 +8,8 @@
   function toggleSoundOnOff()  {
     if (soundOn == true) {
       soundOn = false
+      mySound.pause();
+      mySound.currentTime = 0;
     } else if (soundOn == false) {
       soundOn = true
     }
