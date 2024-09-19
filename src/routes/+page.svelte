@@ -18,7 +18,11 @@
   <title>Visitekaartje</title>
 </svelte:head>
 
-<h1>{data.person.name}'s visitekaartje</h1>
+<header>
+  <h1>{data.person.name}'s visitekaartje</h1>
+  <label><input type="checkbox" value="sound">sound</label>
+</header>
+
 
 <main>
   <section>
@@ -144,11 +148,27 @@
 <audio bind:this={mySound} src='/strum.wav' />
 
 <style>
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
   h1 {
     font-size: 3rem;
     text-align: center;
   }
 
+  label {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.4rem;
+  }
+
+  label, input {
+    cursor: pointer;
+  }
+  
   p, a {
     font-size: 1.5rem;
   }
