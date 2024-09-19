@@ -15,6 +15,11 @@
 
   function playSound(mySound) {
     if (soundOn !== false){
+      if (mySound.currentTime !== 0){
+        mySound.pause();
+        mySound.currentTime = 0;
+        mySound.play();
+      }
       mySound.play();
     }
   }
