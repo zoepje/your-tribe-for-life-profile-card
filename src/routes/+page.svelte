@@ -3,9 +3,20 @@
 
   let mySound
   let current = 0;
+  let soundOn = true;
+
+  function toggleSoundOnOff()  {
+    if (soundOn == true) {
+      soundOn = false
+    } else if (soundOn == false) {
+      soundOn = true
+    }
+  }
 
   function playSound(mySound) {
-    mySound.play();
+    if (soundOn !== false){
+      mySound.play();
+    }
   }
 
   function showInfo() {
@@ -20,7 +31,7 @@
 
 <header>
   <h1>{data.person.name}'s visitekaartje</h1>
-  <label><input type="checkbox" value="sound">sound</label>
+  <label><input type="checkbox" value="sound" checked on:change={toggleSoundOnOff}>sound</label>
 </header>
 
 
@@ -168,7 +179,7 @@
   label, input {
     cursor: pointer;
   }
-  
+
   p, a {
     font-size: 1.5rem;
   }
